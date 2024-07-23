@@ -1,10 +1,12 @@
 import './Signup.css'
 import Header  from '../../components/Header/Header'
 import { NavLink } from 'react-router-dom'
+import { Logo } from '../../components/Logo/Logo'
 export const SignUp = ()=>{
     return (
        
     <div className='MainContainer'>
+        <Logo/>
                
         <div className="container">
      
