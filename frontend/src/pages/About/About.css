@@ -1,0 +1,14 @@
+.About{
+    width: 100%;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+  
+}
+.container{
+     width: 80%; 
+     flex: 1;
+}

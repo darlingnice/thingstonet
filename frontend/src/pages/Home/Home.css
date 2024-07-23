@@ -1,0 +1,11 @@
+
+.Components-Container{
+  width: 80%;
+  height: 70%;
+  /* background-color: red; */
+}
+
+.input-field{
+  width: 200px;
+  height: 40%;
+}

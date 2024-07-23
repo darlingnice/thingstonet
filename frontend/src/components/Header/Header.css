@@ -1,0 +1,130 @@
+.Header{
+    width: 100%;
+    height: 80px;
+   /* background-color: #0082e6; */
+   background-color: #1a237e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* align-items: center; */
+}
+.logo-container{
+  flex: 1;
+}
+.nav-container{
+  width: 100%;
+  flex:1;
+  padding: 0 20px;
+
+
+  
+}
+.nav {
+    background: #1a237e;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  
+  .nav-container ul {
+    float: right;
+    margin-right: 20px;
+  }
+  
+  .nav-container ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  
+  .nav-container ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  
+  a.active,
+  a:hover {
+    /* background: #1b9bff; */
+    background: #3949ab;
+    transition: .5s;
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  @media (max-width: 952px) {
+    label.logo {
+      font-size: 30px;
+      padding-left: 50px;
+    }
+  
+    .nav-container ul li a {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+    }
+  
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+  
+    .nav-container ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+  
+    .nav-container ul li a {
+      font-size: 20px;
+    }
+  
+    a:hover,
+    a.active {
+      background: none;
+      color: #0082e6;
+    }
+  
+    #check:checked~ul {
+      left: 0;
+    }
+  }
+  
+  section {
+    /* background: url(bg1.jpg) no-repeat; */
+    background-size: cover;
+    height: calc(100vh - 80px);
+  }

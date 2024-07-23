@@ -1,0 +1,21 @@
+.Sidenav{
+    width: 15%;
+    height: 100%;
+    /* flex: 1; */
+    background-color: purple;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Sidenav-right{
+    width: 15%;
+    height: 100%;
+    /* flex: 1; */
+    background-color: rgb(0, 92, 128);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
