@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     # third party apps 
     'django_extensions',
     'rest_framework',
+    # 'token',
+    # 'rest_framework.authtoken',
+    # 'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -72,8 +75,22 @@ TEMPLATES = [
 WSGI_APPLICATION = 'thingstonet.wsgi.application'
 
 
-# AUTH_USER_MODEL  = 'authenticate.User'
+
 AUTH_USER_MODEL = 'users.User'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        # 'rest_framework.permissions.IsAuthenticated',
+    ),
+     'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+}
+
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -127,10 +144,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+# CORS settings
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    'http://127.0.0.1:5500',
     
 ]
+# CORS_ORGIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_METHODS = [
     'DELETE',
